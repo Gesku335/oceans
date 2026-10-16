@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+/* Токены §10.3 подключаются из layout.tsx как '@ocean/ui/tokens.css'
+   (так webpack корректно резолвит url() шрифтов из packages/ui/fonts). */
+
+/* §10.10: видимый фокус на всех интерактивных элементах. */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--ocean-600);
+  outline-offset: 2px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+}
